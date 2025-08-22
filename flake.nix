@@ -12,8 +12,8 @@
       let
         pkgs = import nixpkgs { inherit system; };
         host = builtins.getEnv "HOSTNAME";
-        hostConfig = ./system/configuration.nix;
-        hostHM = ./home-manager/home.nix;
+        hostConfig = ./system/default.nix;
+        hostHM = ./home-manager/my-home.nix;
       in {
         nixosConfigurations = {
           nixos = pkgs.lib.nixosSystem {

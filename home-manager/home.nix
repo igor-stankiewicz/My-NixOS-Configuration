@@ -1,1 +1,0 @@
-/home/igorstankiewicz/.config/home-manager/home.nix
