@@ -1,0 +1,12 @@
+@theme "~/.config/rofi/my-theme.rasi"
+
+configuration {
+    show-icons: true;
+    icon-theme: "Gruvbox-Plus-Dark";
+    font: "Iosevka Nerd Font Heavy 10";
+
+    display-drun: "Applications:";
+    display-killmenu: "Killmenu:";
+    drun-display-format: "{icon} {name}";
+    lines: 20;  // Max number of visible rows
+}

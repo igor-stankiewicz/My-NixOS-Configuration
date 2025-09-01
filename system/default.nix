@@ -55,7 +55,8 @@
       hplip 
       gutenprint 
     ];
-    blueman.enable = true;#ebdbb2
+    blueman.enable = true;
+    flatpak.enable = true;
     upower.enable = true;
     pipewire = {
       enable = true;
@@ -92,11 +93,10 @@
       git 
       simple-scan 
       freeoffice 
-      libreoffice 
+      libreoffice
+      seafile-client 
       qtcreator 
       cmake 
-      gnuradio 
-      arduino-ide
       virtualbox 
       tela-icon-theme
       papirus-icon-theme 
@@ -146,7 +146,9 @@
     zenity 
     wine
     wineWowPackages.waylandFull 
-    wineasio 
+    wineasio
+    winetricks
+    unixODBC
     bottles 
     corefonts 
     usbutils 
@@ -165,15 +167,8 @@
       manager = {
         show_hidden = true;
       };
-      keybindings = {
-        enter = [
-          { type = "file"; run = "code --wait $1"; }
-          { type = "directory"; run = "yazi_open $1"; }
-        ];
-      };
     };
   };
-
 
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code

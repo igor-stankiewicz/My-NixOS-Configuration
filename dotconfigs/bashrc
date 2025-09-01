@@ -1,0 +1,12 @@
+pre_prompt() { echo; }
+export EDITOR="code --wait"
+force_color_prompt=yes
+
+# Gruvbox Bright mapping to match Waybar
+PS1='\[\e[38;2;235;219;178m\]\u'\
+'\[\e[38;2;254;128;25m\]@\h '\
+'\[\e[38;2;131;165;152m\]\w '\
+'\[\e[38;2;184;187;38m\]\$ '\
+'\[\e[0m\]'
+
+PROMPT_COMMAND=pre_prompt

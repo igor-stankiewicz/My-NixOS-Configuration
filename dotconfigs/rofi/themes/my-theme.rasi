@@ -1,0 +1,72 @@
+* {
+    background: rgba(51, 51, 51, 0.8);;
+    foreground:     #ffffff;
+    selected:       #ffae00;
+    active:         #fca2e9;
+    urgent:         #b9c486;
+
+    border:         0;
+    padding:        8;
+    spacing:        4;
+    font: "Iosevka Nerd Font Heavy 10";
+}
+
+window {
+    background-color: @background;
+    border: 2px;
+    border-color: @active;
+    padding: 10;
+}
+
+mainbox {
+    background-color: @background;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    background-color: @background;
+    padding: 6;
+    children: [prompt, entry];
+}
+
+prompt {
+    text-color: @active;
+}
+
+entry {
+    text-color: @foreground;
+    cursor: text;
+}
+
+listview {
+    background-color: @background;
+    scrollbar: true;
+    fixed-height: 0;
+    padding: 4;
+}
+
+element {
+    padding: 4;
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+element selected {
+    background-color: @selected;
+    text-color: @background;
+}
+
+element active {
+    background-color: @active;
+    text-color: @background;
+}
+
+element urgent {
+    background-color: @urgent;
+    text-color: @background;
+}
+
+scrollbar {
+    width: 4px;
+    handle-color: @active;
+}

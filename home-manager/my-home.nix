@@ -61,7 +61,7 @@
   #  /etc/profiles/per-user/igorstankiewicz/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "code --wait";
   };
 
   # Let Home Manager install and manage itself.

@@ -1,0 +1,63 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 28,
+
+  "modules-left": ["custom/power","battery", "pulseaudio", "custom/brightness"],
+  "modules-center": ["clock"],
+  "modules-right": ["network","custom/mobile-bb","tray"],
+
+  "clock": {
+  "format": "{:%a %b %d | %H:%M}", 
+  "tooltip": false
+  },
+
+  "network": {
+    "interface": "wlp1s0",
+    "format-wifi": "{essid} ({signalStrength}%)",
+    "format-ethernet": "Ethernet connection",
+    "format-disconnected": "Network interface disconnected",
+    "tooltip-format": "Interface: {ifname}\nIP: {ipaddr}",
+    "on-click": "kitty -e nmtui"
+  },
+
+  "battery": {
+    "format": "bat: {capacity}%",
+    "on-click": "kitty -e upower -i $(upower -e | grep BAT)",
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+  "pulseaudio": {
+    "format": "vol: {volume}%",
+    "tooltip": false,
+    "on-click": "pavucontrol"
+  },
+
+  "custom/power": {
+    "format": "shutdown",
+    "tooltip": "Shutdown",
+    "on-click": "poweroff",
+    "interval": 9999
+  },
+
+  "custom/brightness": {
+    "exec": "~/.config/waybar/brightness-control.sh",
+    "interval": 2,
+    "format": "bri: {}%",
+    "tooltip": false,
+    "on-click": "brightnessctl set 255",
+    "on-click-right": "brightnessctl set 5%-"
+  },
+  "custom/mobile-bb": {
+    "exec": "~/.config/waybar/mobile-bb.sh",
+    "format": "{text}",
+    "interval": 5,
+    "tooltip": "{tooltip}",
+    "on-click": "kitty -e nmtui"
+  },
+  "tray": {
+    "spacing": 10
+  }
+}

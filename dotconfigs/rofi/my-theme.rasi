@@ -1,0 +1,101 @@
+* {
+  border: 0;
+  padding: 4;
+  spacing: 4;
+  font: "Iosevka Nerd Font Heavy 10";
+}
+
+window {
+  location: center;
+  anchor: center;
+  fullscreen: false;
+  width: 20%;
+  height: 90%;
+  border: 2;
+  padding: 0;
+  background-color: transparent; /* bg0 with transparency */
+  border-radius: 6px;
+  box-shadow: rgba(0,0,0,0.6);
+}
+
+mainbox {
+  orientation: vertical;
+  spacing: 10;
+  background-color: transparent;
+}
+
+inputbar {
+  background-color:  #1d2021; /* bg1 */
+  text-color: #ebdbb2;
+  padding: 0;
+  margin: 0 0 10 0;
+  border-radius: 6px;
+
+}
+
+listview {
+  background-color: rgba(29,32,33,0.95); /* bg, slightly transparent */
+  padding: 6;
+  dynamic: true;
+  layout: vertical;
+  scrollbar: false;
+  fixed-height: false;
+  spacing: 4;
+  border: 0;
+  border-radius: 6px;
+}
+
+element {
+  padding: 8;
+  background-color: transparent;
+  text-color: #ebdbb2; /* fg */
+  border: 0;
+}
+
+element selected {
+  background-color: #83a598; /* blue accent */
+  text-color: #fbf1c7; /* light fg */
+  border: 0;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+element-text {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+element-icon {
+  background-color: transparent;
+  padding: 4;
+  margin: 0 6 0 0;
+  border-radius: 4px;
+}
+
+scrollbar {
+  width: 8px;
+  border: 0;
+  handle-width: 8px;
+  handle-color: #3c3836; /* gray */
+  background-color: #fbf1c7; /* bg1 */
+  border-radius: 6px;
+  handle-radius: 6px;
+}
+
+message {
+  padding: 8;
+  background-color: #1d2021;
+  text-color: #d79921; /* yellow */
+  border:  #504945;
+  border-radius: 6px;
+  font-style: italic;
+}
+
+entry, prompt, textbox-prompt-colon, button, case-indicator {
+  background-color: #1d2021;
+  text-color: #ebdbb2;
+  padding: 6;
+  border-radius: 0px;
+  cursor-width: 6px;
+
+}
